@@ -26,7 +26,9 @@ Further information about plugin installation can be found at: http://www.redmin
 
 ## Compatibility
 
-The latest version of this plugin was tested with Redmine 2.3.x.
+The latest version of this plugin was tested with Redmine 2.5.3.
+
+* A version for Redmine 2.3.x is tagged with [v2.3](https://github.com/jfqd/redmine_email_login/releases/tag/v2.3 "plugin version for Redmine 2.3.x")
 
 ## License
 

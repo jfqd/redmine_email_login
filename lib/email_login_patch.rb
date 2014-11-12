@@ -11,7 +11,7 @@ module RedmineEmailLogin
     end
     
     module ClassMethods
-      def try_to_login_with_email(login, password)
+      def try_to_login_with_email(login, password, active_only=true)
         login = login.to_s
         password = password.to_s
 
@@ -26,8 +26,8 @@ module RedmineEmailLogin
         # validate user
         if user
           # user is already in local database
-          return nil unless user.active?
           return nil unless user.check_password?(password)
+          return nil if !user.active? && active_only
         else
           # user is not yet registered, try to authenticate with available sources
           attrs = AuthSource.authenticate(login, password)
@@ -41,7 +41,7 @@ module RedmineEmailLogin
             end
           end
         end
-        user.update_column(:last_login_on, Time.now) if user && !user.new_record?
+        user.update_column(:last_login_on, Time.now) if user && !user.new_record? && user.active?
         user
       rescue => text
         raise text
