@@ -12,7 +12,7 @@ module RedmineEmailLogin
     
     module ClassMethods
       def try_to_login_with_email(login, password, active_only=true)
-        login = login.to_s
+        login = login.to_s.strip
         password = password.to_s
 
         # Make sure no one can sign in with an empty login or password
