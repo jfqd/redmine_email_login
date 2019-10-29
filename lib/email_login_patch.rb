@@ -5,7 +5,8 @@ module RedmineEmailLogin
       base.extend ClassMethods
       base.class_eval do
         class << self
-          alias_method_chain :try_to_login, :email
+          alias_method :try_to_login_without_email, :try_to_login
+          alias_method :try_to_login, :try_to_login_with_email
         end
       end
     end
