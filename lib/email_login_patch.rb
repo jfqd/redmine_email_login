@@ -5,14 +5,14 @@ module RedmineEmailLogin
       base.extend ClassMethods
       base.class_eval do
         class << self
-          alias_method :try_to_login_without_email, :try_to_login
-          alias_method :try_to_login, :try_to_login_with_email
+          alias_method :try_to_login_without_email!, :try_to_login!
+          alias_method :try_to_login!, :try_to_login_with_email!
         end
       end
     end
     
     module ClassMethods
-      def try_to_login_with_email(login, password, active_only=true)
+      def try_to_login_with_email!(login, password, active_only=true)
         login = login.to_s.strip
         password = password.to_s
 
@@ -42,7 +42,7 @@ module RedmineEmailLogin
             end
           end
         end
-        user.update_column(:last_login_on, Time.now) if user && !user.new_record? && user.active?
+        user.update_last_login_on! if user && !user.new_record? && user.active?
         user
       rescue => text
         raise text
