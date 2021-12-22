@@ -26,8 +26,9 @@ Further information about plugin installation can be found at: http://www.redmin
 
 ## Compatibility
 
-The latest version of this plugin was tested with Redmine 4.0.5.
+The latest version of this plugin was tested with Redmine 4.2.3.
 
+* A version for Redmine 4.0.x is tagged with [v4.0](https://github.com/jfqd/redmine_email_login/releases/tag/v4.0 "plugin version for Redmine 4.0.x")
 * A version for Redmine 2.5.x is tagged with [v2.5](https://github.com/jfqd/redmine_email_login/releases/tag/v2.5 "plugin version for Redmine 2.5.x")
 * A version for Redmine 2.3.x is tagged with [v2.3](https://github.com/jfqd/redmine_email_login/releases/tag/v2.3 "plugin version for Redmine 2.3.x")
 
@@ -37,4 +38,4 @@ This plugin is licensed under the MIT license. See LICENSE-file for details.
 
 ## Copyright
 
-Copyright (c) 2014-2019 Stefan Husch, qutic development GmbH.
+Copyright (c) 2014-2021 qutic development GmbH.
