@@ -1,7 +1,11 @@
-0.0.1
+0.0.3
 ---
-* First release
+* Update code for redmine 4.0
 
 0.0.2
 ---
 * Update code for redmine 2.5
+
+0.0.1
+---
+* First release
