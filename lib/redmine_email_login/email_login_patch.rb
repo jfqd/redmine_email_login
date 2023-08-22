@@ -53,4 +53,4 @@ module RedmineEmailLogin
 end # module RedmineEmailLogin
 
 # Add module to User class
-User.send(:include, RedmineEmailLogin::EmailLoginPatch)
+User.send(:include, ::RedmineEmailLogin::EmailLoginPatch)

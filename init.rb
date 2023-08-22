@@ -1,5 +1,5 @@
 require 'redmine'
-require 'email_login_patch'
+require File.dirname(__FILE__) + '/lib/redmine_email_login/email_login_patch'
 
 Redmine::Plugin.register :redmine_email_login do
   name 'Redmine email login'
